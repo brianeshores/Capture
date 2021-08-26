@@ -53,6 +53,7 @@ const Movie = styled.div`
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    object-postition: top;
   }
 `;
 
