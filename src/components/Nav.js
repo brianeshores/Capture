@@ -13,17 +13,17 @@ const Nav = () => {
       <ul>
         <li>
           <NavLink exact={true} activeClassName="active" to="/">
-            1. About Us
+            About Us
           </NavLink>
         </li>
         <li>
           <NavLink activeClassName="active" to="/work">
-            2. Our Work
+            Our Work
           </NavLink>
         </li>
         <li>
           <NavLink activeClassName="active" to="/contact">
-            3. Contact Us
+            Contact Us
           </NavLink>
         </li>
       </ul>
@@ -62,6 +62,24 @@ const StyledNav = styled.nav`
   .active {
     font-weight: bold;
     color: #23d997;
+  }
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    #logo {
+      padding: 2rem;
+    }
+    ul {
+      padding: 2rem;
+      justify-content: space-around;
+      width: 100;
+      li {
+        padding: 0rem;
+        a {
+          padding: 1rem;
+        }
+      }
+    }
   }
 `;
 

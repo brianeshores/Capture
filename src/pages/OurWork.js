@@ -73,6 +73,9 @@ const Work = styled(motion.div)`
   h2 {
     padding: 1rem 0rem;
   }
+  @media (max-width: 900px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 const Movie = styled(motion.div)`
