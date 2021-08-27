@@ -3,17 +3,24 @@ import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
 import { AnimateSharedLayout, motion } from "framer-motion";
-import { faqFade } from "../animation";
+import { faqFade, fade } from "../animation";
+import { useScroll } from "./useScroll";
 
 const FaqSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Faq>
+    <Faq ref={element} animate={controls} initial="hidden" variants={fade}>
       <h2>
         Any Questions <span>FAQ</span>
       </h2>
       <AnimateSharedLayout>
         <Toggle title="How do I start?">
-          <motion.div variants={faqFade} className="answer">
+          <motion.div
+            variants={faqFade}
+            initial="hidden"
+            animate="show"
+            className="answer"
+          >
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
@@ -22,7 +29,12 @@ const FaqSection = () => {
           </motion.div>
         </Toggle>
         <Toggle title="Daily schedule">
-          <motion.div variants={faqFade} className="answer">
+          <motion.div
+            variants={faqFade}
+            initial="hidden"
+            animate="show"
+            className="answer"
+          >
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
@@ -31,7 +43,12 @@ const FaqSection = () => {
           </motion.div>
         </Toggle>
         <Toggle title="Different payment methods">
-          <motion.div variants={faqFade} className="answer">
+          <motion.div
+            variants={faqFade}
+            initial="hidden"
+            animate="show"
+            className="answer"
+          >
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
@@ -40,7 +57,12 @@ const FaqSection = () => {
           </motion.div>
         </Toggle>
         <Toggle title="What products do you offer?">
-          <motion.div variants={faqFade} className="answer">
+          <motion.div
+            variants={faqFade}
+            initial="hidden"
+            animate="show"
+            className="answer"
+          >
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,

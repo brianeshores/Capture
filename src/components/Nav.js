@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <StyledNav>
       <h1>
-        <NavLink exact={true} id="logo" to="/">
+        <Link id="logo" to="/">
           Captures
-        </NavLink>
+        </Link>
       </h1>
       <ul>
         <li>
