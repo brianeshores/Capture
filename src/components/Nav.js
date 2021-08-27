@@ -12,19 +12,13 @@ const Nav = () => {
       </h1>
       <ul>
         <li>
-          <Link id="logo" to="/">
-            1. About Us
-          </Link>
+          <Link to="/">1. About Us</Link>
         </li>
         <li>
-          <Link id="logo" to="/work">
-            2. Our Work
-          </Link>
+          <Link to="/work">2. Our Work</Link>
         </li>
         <li>
-          <Link id="logo" to="/contact">
-            3. Contact Us
-          </Link>
+          <Link to="/contact">3. Contact Us</Link>
         </li>
       </ul>
     </StyledNav>
@@ -49,7 +43,7 @@ const StyledNav = styled.nav`
   }
   #logo {
     font-size: 1.5rem;
-    font-family: "Lobster" cursive;
+    font-family: "Lobster", cursive;
     font-weight: lighter;
   }
   li {
