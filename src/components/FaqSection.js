@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
-import { AnimateSharedLayout } from "framer-motion";
+import { AnimateSharedLayout, motion } from "framer-motion";
+import { faqFade } from "../animation";
 
 const FaqSection = () => {
   return (
@@ -12,40 +13,40 @@ const FaqSection = () => {
       </h2>
       <AnimateSharedLayout>
         <Toggle title="How do I start?">
-          <div className="answer">
+          <motion.div variants={faqFade} className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
               temporibus!
             </p>
-          </div>
+          </motion.div>
         </Toggle>
         <Toggle title="Daily schedule">
-          <div className="answer">
+          <motion.div variants={faqFade} className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
               temporibus!
             </p>
-          </div>
+          </motion.div>
         </Toggle>
         <Toggle title="Different payment methods">
-          <div className="answer">
+          <motion.div variants={faqFade} className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
               temporibus!
             </p>
-          </div>
+          </motion.div>
         </Toggle>
         <Toggle title="What products do you offer?">
-          <div className="answer">
+          <motion.div variants={faqFade} className="answer">
             <p>Lorem ipsum dolor sit amet.</p>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum,
               temporibus!
             </p>
-          </div>
+          </motion.div>
         </Toggle>
       </AnimateSharedLayout>
     </Faq>

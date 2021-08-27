@@ -1,24 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
     <StyledNav>
       <h1>
-        <Link id="logo" to="/">
+        <NavLink exact={true} id="logo" to="/">
           Captures
-        </Link>
+        </NavLink>
       </h1>
       <ul>
         <li>
-          <Link to="/">1. About Us</Link>
+          <NavLink exact={true} activeClassName="active" to="/">
+            1. About Us
+          </NavLink>
         </li>
         <li>
-          <Link to="/work">2. Our Work</Link>
+          <NavLink activeClassName="active" to="/work">
+            2. Our Work
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">3. Contact Us</Link>
+          <NavLink activeClassName="active" to="/contact">
+            3. Contact Us
+          </NavLink>
         </li>
       </ul>
     </StyledNav>
@@ -49,6 +55,10 @@ const StyledNav = styled.nav`
   li {
     padding-left: 10rem;
     position: relative;
+  }
+  .active {
+    font-weight: bold;
+    color: #23d997;
   }
 `;
 
