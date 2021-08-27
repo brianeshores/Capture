@@ -17,7 +17,7 @@ export const pageAnimation = {
   },
 };
 
-export const titleAnimation = {
+export const titleAnim = {
   hidden: { y: 200 },
   show: {
     y: 0,
