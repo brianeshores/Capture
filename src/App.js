@@ -10,11 +10,12 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
   const location = useLocation();
+
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence>
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
             <AboutUs />
