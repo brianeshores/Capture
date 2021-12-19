@@ -10,4 +10,6 @@ To run in development mode, in the project directory run:
 
 ### `npm start`
 
-### Screenshots
+## Screenshots
+
+![](https://github.com/brianeshores/Capture/blob/master/screenshots/capture.gif)
